@@ -1,6 +1,10 @@
 port: ${PORT:8080}
 
 spring:
+  task:
+    scheduling:
+      pool:
+        size: 10
   jpa:
     hibernate:
       ddl-auto: update
@@ -15,3 +19,24 @@ binance:
   apiKey: ${BINANCE_API_KEY}
   secretKey:  ${BINANCE_API_SECRET}
   apiBaseUrl: https://api.binance.com
+
+cex:
+  apiUrl: https://cex.io
+  apiKey: YOUR_API_KEY
+  apiSecret: YOUR_API_SECRET
+
+bybit:
+  apiBaseUrl: https://api.bybit.com
+  apiKey: YOUR_API_KEY
+  apiSecret: YOUR_API_SECRET
+
+currency:
+  apiUrl: https://api-adapter.backend.currency.com/
+  apiKey: YOUR_API_KEY
+  apiSecret: YOUR_API_SECRET
+
+telegram:
+  bot:
+   token: "6167942289:AAE0ALKlzA8C1oeSZDhXk8KpmYqtAcY9Zw8"
+  chat:
+    id: "773022887"
